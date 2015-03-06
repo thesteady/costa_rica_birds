@@ -1,0 +1,12 @@
+<% @locations.each do |loc| %>
+<h4><%= loc.name %></h4>
+
+<% if loc.website %>
+  <%= link_to "location website", "http://#{loc.website}" %>
+<% end %>
+
+<br>
+<br>
+<a href=<%= loc.ebird_link %> >Check it out on ebird</a>
+<hr>
+<% end %>

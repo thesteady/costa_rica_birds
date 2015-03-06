@@ -11,20 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306000241) do
+ActiveRecord::Schema.define(version: 20150306005229) do
+
+  create_table "bird_locations", force: true do |t|
+    t.integer  "bird_id"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "birds", force: true do |t|
-    t.string   "name",        null: false
-    t.integer  "rank"
+    t.string   "name",                null: false
     t.text     "description"
+    t.integer  "number_of_locations"
+    t.boolean  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "locations", force: true do |t|
-    t.string   "name",          null: false
+    t.string   "name",       null: false
+    t.string   "website"
     t.text     "note"
-    t.string   "ebird_hotspot"
+    t.string   "ebird_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
