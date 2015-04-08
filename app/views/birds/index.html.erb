@@ -1,12 +1,18 @@
 <table>
-  <th>Name</th>
-  <th># of Locations</th>
-  <th>Priority Species?</th>
-  <% @birds.each do |bird| %>
-  <tr>
-    <td><%= link_to bird.name, bird_path(bird) %></td>
-    <td><%= bird.number_of_locations %></td>
-    <td><%= bird.priority %></td>
-  </tr>
-  <% end %>
+  <thead>
+    <th>Name</th>
+    <th># of Locations</th>
+    <th>Priority Species?</th>
+  </thead>
+  <tbody>
+    <% @birds.each do |bird| %>
+    <tr>
+      <td><%= link_to bird.name, bird_path(bird) %></td>
+      <td><%= bird.number_of_locations %></td>
+      <td><%= bird.priority ? "Yes" : "No" %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
+
+<div id="bar-chart">
