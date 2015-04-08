@@ -1,1 +1,21 @@
-make a new bird!
+<%= form_for @bird, url: {action: "create"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
+
+  <%= f.label :number_of_locations %>
+  <%= f.number_field :number_of_locations, in: 1..20, step: 1 %>
+
+  <%= f.label :priority %>
+  <%= f.label "Yes" %>
+  <%= f.radio_button :priority, true %>
+  <%= f.label "No" %>
+  <%= f.radio_button :priority, false, {checked: true} %>
+
+  <%= f.submit %>
+<% end %>
