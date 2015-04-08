@@ -1,5 +1,11 @@
-<ul>
-  <li>Name: <%= @bird.name %></li>
-  <li>Priority: <%= @bird.priority %></li>
-  <li>Number of Locations: <%= @bird.number_of_locations %></td>
-</ul>
+<h2><%= @bird.name %></h2>
+
+<% if @bird.priority %>
+<h4>Priority Bird</h4>
+<% end %>
+
+<p>Seen at <span style="font-weight: bold;"><%= @bird.number_of_locations %></span> locations in April-June </p>
+
+<%= image_tag @bird.photo.url %>
+
+

@@ -8,9 +8,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
+gem 'paperclip', '~> 4.2'
+
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
