@@ -19,3 +19,14 @@ Product Owner Melissa says:
 - allow user to change their date range
 
 
+## Development
+
+### Setup:
+1. make sure you have imagemagick installed (via homebrew)
+2. `bundle install`
+3. `rake db:create db:migrate db:seed`
+
+### Running
+
+`rails s`
+`sass --watch stylesheets/sass:stylesheets`
