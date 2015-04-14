@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150408201003) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bird_locations", force: true do |t|
     t.integer  "bird_id"
     t.integer  "location_id"
