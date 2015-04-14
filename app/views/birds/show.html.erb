@@ -1,11 +1,16 @@
 <h2><%= @bird.name %></h2>
 
+<%= link_to "Edit This Bird", edit_bird_path(@bird) %>
+
 <% if @bird.priority %>
 <h4>Priority Bird</h4>
 <% end %>
 
-<p>Seen at <span style="font-weight: bold;"><%= @bird.number_of_locations %></span> locations in April-June </p>
+<p>Seen at <span><%= @bird.number_of_locations %></span> locations in April-June </p>
+<%= image_tag @bird.photo.url(:medium) %>
 
-<%= image_tag @bird.photo.url %>
 
+<% if @bird.description %>
+<p><%= @bird.description %></p>
+<% end %>
 

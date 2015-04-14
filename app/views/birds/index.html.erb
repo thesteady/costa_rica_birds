@@ -11,10 +11,8 @@
       <td><%= link_to bird.name, bird_path(bird) %></td>
       <td><%= bird.number_of_locations %></td>
       <td><%= bird.priority ? "Yes" : "No" %></td>
-      <td><%= bird.photo_file_name.present? ? "Yes" : "" %></td>
+      <td><%= image_tag bird.photo.url(:thumbnail) %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
-<div id="bar-chart">

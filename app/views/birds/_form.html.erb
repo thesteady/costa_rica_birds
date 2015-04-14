@@ -1,4 +1,4 @@
-<%= form_for @bird, url: bird_path, :html => { :multipart => true } do |f| %>
+<%= form_for bird, url: {action: action}, multipart: true do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -12,12 +12,12 @@
   <%= f.number_field :number_of_locations, in: 1..20, step: 1 %>
 
   <%= f.label :priority %>
-
-  <%= f.label :priority_yes, "Yes" %>
+  <%= f.label "Yes" %>
   <%= f.radio_button :priority, true %>
-  <%= f.label :priority_no, "No" %>
+  <%= f.label "No" %>
   <%= f.radio_button :priority, false, {checked: true} %>
 
   <br>
+
   <%= f.submit %>
 <% end %>
