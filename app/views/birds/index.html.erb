@@ -1,18 +1,22 @@
 <table>
   <thead>
+    <th></th>
     <th>Name</th>
     <th># of Locations</th>
     <th>Priority Species?</th>
-    <th>Photo?</th>
+    <th>Photo</th>
   </thead>
   <tbody>
+    <% count = 1 %>
     <% @birds.each do |bird| %>
     <tr>
+      <td><%= count %></td>
       <td><%= link_to bird.name, bird_path(bird) %></td>
       <td><%= bird.number_of_locations %></td>
       <td><%= bird.priority ? "Yes" : "No" %></td>
-      <td><%= image_tag bird.photo.url(:thumbnail) %></td>
+      <td><%= image_tag(bird.photo.url(:thumbnail)) if bird.photo_file_name %></td>
     </tr>
+    <% count += 1 %>
     <% end %>
   </tbody>
 </table>
