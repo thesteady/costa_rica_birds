@@ -7,11 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to "Birds of Costa Rica", root_path %>
-  <h2>April-June (at select sites)</h2>
-  <hr>
+  <div id='title-bar'>
+    <h1 id='title'><%= link_to "Birds of Costa Rica", root_path %></h1>
+    <h2 id='subtitle'>April-June (at select sites)</h2>
+  </div>
 
-<%= yield %>
+  <div id="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
