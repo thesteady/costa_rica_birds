@@ -1,0 +1,3 @@
+S3_BUCKET_NAME: namegoeshere
+AWS_ACCESS_KEY_ID: im_an_id
+AWS_SECRET_ACCESS_KEY: im_secret

@@ -9,14 +9,13 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-
-gem 'rails_12factor', group: :production
-
 gem 'paperclip', '~> 4.2'
-
+gem 'aws-sdk'
+gem 'figaro'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'rails_12factor', group: :production
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
