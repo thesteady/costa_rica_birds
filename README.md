@@ -3,8 +3,33 @@ Birds of Costa Rica
 
 Learn birds of Costa Rica.
 
+## Development
+
+### Setup:
+1. make sure you have imagemagick installed (via homebrew)
+2. setup the application.yml with any needed ENV vars (S3 config)
+3. `bundle install`
+4. `rake db:create db:migrate db:seed`
+
+### Running
+
+`rails s`
+`sass --watch stylesheets/sass:stylesheets`
 
 
+### Deploying To Heroku
+
+`git push heroku master`
+
+To Do:
+------
+x get AWS set up.
+x get paperlip working with aws (config/environments/production vs. dev)
+- clear out the tmp photos
+- add the photos
+- switch out webrick for puma
+- password protect.
+- rspec that shit.
 
 
 Product Owner Melissa says:
@@ -19,14 +44,17 @@ Product Owner Melissa says:
 - allow user to change their date range
 
 
-## Development
+Laura says:
+-----------
+- xeno canto embed
+- video embed
 
-### Setup:
-1. make sure you have imagemagick installed (via homebrew)
-2. `bundle install`
-3. `rake db:create db:migrate db:seed`
 
-### Running
+AWS Setup:
+-----------
+- test adding photo via seed task
+- add attribution data before I go too far.
+- can I do a direct upload from dev, use my dev db to seed prod with the right links?
+- whats the right way to batch these?
 
-`rails s`
-`sass --watch stylesheets/sass:stylesheets`
+

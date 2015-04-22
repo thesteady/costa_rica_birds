@@ -10,7 +10,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'paperclip', '~> 4.2'
-gem 'aws-sdk'
+
+# there's an issue with >2 moving to AWS SDK v2.
+# http://stackoverflow.com/questions/28374401/nameerror-uninitialized-constant-paperclipstorages3aws
+gem 'aws-sdk', '< 2.0'
+
 gem 'figaro'
 gem 'bourbon'
 gem 'neat'
