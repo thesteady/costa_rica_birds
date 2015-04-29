@@ -14,9 +14,19 @@ end
 
 require 'csv'
 
-csv_text = File.read(Rails.root.join('db', 'all_species.csv'))
+csv_text = File.read(Rails.root.join('db', 'seeds', 'test_upload.csv'))
 csv = CSV.parse(csv_text, headers: true)
 csv.each do |row|
   priority = row['priority'] == "Y" ? true : false
-  Bird.create(name: row['name'], priority: priority, number_of_locations: row['number_of_locations'])
+  photo_url = row['url']
+  attribution = row['credit']
+  name = row['name']
+  puts "processing #{name}"
+  Bird.create(
+    name: name,
+    priority: priority,
+    number_of_locations: row['number_of_locations'],
+    photo_remote_url: photo_url,
+    attribution: attribution
+  )
 end
