@@ -5,10 +5,15 @@
 <% end %>
 
 <p>Seen at <span class='count'><%= @bird.number_of_locations %></span> locations in April-June </p>
-<%= image_tag @bird.photo.url(:medium) if @bird.photo_file_name %>
-
+<% if @bird.photo_file_name %>
+  <%= image_tag @bird.photo.url(:medium) %>
+  <p style="font-size: .5em;">
+    <span style="font-style:italic;">Photo Credit</span>
+    <%= @bird.attribution %>
+  </p>
+<% end %>
 
 <% if @bird.description %>
-<p><%= @bird.description %></p>
+  <p><%= @bird.description %></p>
 <% end %>
 
