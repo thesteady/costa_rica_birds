@@ -25,11 +25,11 @@ To Do:
 ------
 x get AWS set up.
 x get paperlip working with aws (config/environments/production vs. dev)
+x password protect.
+x rspec.
 - clear out the tmp photos
 - add the photos
 - switch out webrick for puma
-- password protect.
-- rspec that shit.
 
 
 Product Owner Melissa says:
@@ -48,13 +48,4 @@ Laura says:
 -----------
 - xeno canto embed
 - video embed
-
-
-AWS Setup:
------------
-- test adding photo via seed task
-- add attribution data before I go too far.
-- can I do a direct upload from dev, use my dev db to seed prod with the right links?
-- whats the right way to batch these?
-
 
