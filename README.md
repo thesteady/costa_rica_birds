@@ -3,8 +3,30 @@ Birds of Costa Rica
 
 Learn birds of Costa Rica.
 
+## Development
+
+### Setup:
+1. make sure you have imagemagick installed (via homebrew)
+2. setup the application.yml with any needed ENV vars (S3 config)
+3. `bundle install`
+4. `rake db:create db:migrate db:seed`
+
+### Running
+
+`rails s`
+`sass --watch stylesheets/sass:stylesheets`
 
 
+### Deploying To Heroku
+
+`git push heroku master`
+
+
+To Do:
+------
+- clear out the tmp photos
+- add the photos
+- switch out webrick for puma
 
 
 Product Owner Melissa says:
@@ -19,14 +41,16 @@ Product Owner Melissa says:
 - allow user to change their date range
 
 
-## Development
+Laura says:
+-----------
+- xeno canto embed
+- video embed
 
-### Setup:
-1. make sure you have imagemagick installed (via homebrew)
-2. `bundle install`
-3. `rake db:create db:migrate db:seed`
 
-### Running
-
-`rails s`
-`sass --watch stylesheets/sass:stylesheets`
+Pick color scheme, get it in css.
+whiteboard what i want pages to look like
+update it
+add some more text to the locations?
+figure out photos
+xeno canto
+video

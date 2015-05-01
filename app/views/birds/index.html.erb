@@ -1,22 +1,30 @@
-<table>
-  <thead>
-    <th></th>
-    <th>Name</th>
-    <th># of Locations</th>
-    <th>Priority Species?</th>
-    <th>Photo</th>
-  </thead>
-  <tbody>
-    <% count = 1 %>
-    <% @birds.each do |bird| %>
-    <tr>
-      <td><%= count %></td>
-      <td><%= link_to bird.name, bird_path(bird) %></td>
-      <td><%= bird.number_of_locations %></td>
-      <td><%= bird.priority ? "Yes" : "No" %></td>
-      <td><%= image_tag(bird.photo.url(:thumbnail)) if bird.photo_file_name %></td>
-    </tr>
-    <% count += 1 %>
-    <% end %>
-  </tbody>
-</table>
+<div id='homepage-hero'>
+  <h3 id='sub-sub-title'>Birds were chosen and organized by the number of locations they were observed at in April-June, based on eBird reports. 7 sites that we'll be visiting were used. To see a list of those locations, please visit the <%= link_to "Locations Page", locations_path %></h3>
+  <br>
+  <h3>What is a Priority Species? These are species that were seen at most of the sites we'll be visiting, or are unique (or just plain cool!) birds.</h3>
+</div>
+
+<div>
+  <table>
+    <thead>
+      <th></th>
+      <th>Name</th>
+      <th>Photo</th>
+      <th># of Locations Seen</th>
+      <th>Priority Species?</th>
+    </thead>
+    <tbody>
+      <% count = 1 %>
+      <% @birds.each do |bird| %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= link_to bird.name, bird_path(bird) %></td>
+        <td><%= image_tag(bird.photo.url(:thumbnail)) if bird.photo_file_name %></td>
+        <td><%= bird.number_of_locations %></td>
+        <td><%= t_f?(bird.priority) %></td>
+      </tr>
+      <% count += 1 %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

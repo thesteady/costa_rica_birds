@@ -1,12 +1,15 @@
-<%= form_for bird, url: {action: action}, multipart: true do |f| %>
+<%= form_for bird, url: {action: action} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
   <%= f.label :description %>
   <%= f.text_area :description %>
 
-  <%= f.label :photo %>
-  <%= f.file_field :photo %>
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_remote_url %>
+
+  <%= f.label :photo_credit %>
+  <%= f.text_field :attribution %>
 
   <%= f.label :number_of_locations %>
   <%= f.number_field :number_of_locations, in: 1..20, step: 1 %>

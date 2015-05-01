@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408201003) do
+ActiveRecord::Schema.define(version: 20150429022711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bird_locations", force: true do |t|
+  create_table "bird_locations", force: :cascade do |t|
     t.integer  "bird_id"
     t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "birds", force: true do |t|
+  create_table "birds", force: :cascade do |t|
     t.string   "name",                null: false
     t.text     "description"
     t.integer  "number_of_locations"
@@ -34,9 +34,11 @@ ActiveRecord::Schema.define(version: 20150408201003) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "url"
+    t.string   "attribution"
   end
 
-  create_table "locations", force: true do |t|
+  create_table "locations", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "website"
     t.text     "note"

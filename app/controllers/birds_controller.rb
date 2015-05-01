@@ -37,6 +37,6 @@ class BirdsController < ApplicationController
 
   private
   def bird_params
-    params.require(:bird).permit(:photo, :name, :description, :priority, :number_of_locations)
+    params.require(:bird).permit(:photo_remote_url, :attribution, :name, :description, :priority, :number_of_locations)
   end
 end

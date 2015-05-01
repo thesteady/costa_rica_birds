@@ -16,5 +16,9 @@
 /tmp
 
 
-#where paperclip is storing images locally
+# where paperclip is storing images locally
 /public/system
+
+
+# Ignore application configuration
+/config/application.yml
