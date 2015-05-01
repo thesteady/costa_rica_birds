@@ -21,12 +21,9 @@ Learn birds of Costa Rica.
 
 `git push heroku master`
 
+
 To Do:
 ------
-x get AWS set up.
-x get paperlip working with aws (config/environments/production vs. dev)
-x password protect.
-x rspec.
 - clear out the tmp photos
 - add the photos
 - switch out webrick for puma
@@ -49,3 +46,11 @@ Laura says:
 - xeno canto embed
 - video embed
 
+
+Pick color scheme, get it in css.
+whiteboard what i want pages to look like
+update it
+add some more text to the locations?
+figure out photos
+xeno canto
+video
