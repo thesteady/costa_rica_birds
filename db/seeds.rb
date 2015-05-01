@@ -8,7 +8,7 @@ csv_text = File.read(Rails.root.join('db', 'seeds', 'starter_subset.csv'))
 csv = CSV.parse(csv_text, headers: true)
 csv.each do |row|
   priority = row['priority'] == "Y" ? true : false
-  photo_url = row['url']
+  photo_url = row['photo_link']
   attribution = row['credit']
   name = row['name']
 
