@@ -12,8 +12,10 @@ class Bird < ActiveRecord::Base
   attr_reader :photo_remote_url
 
   def photo_remote_url=(remote_url)
-    self.photo = URI.parse(remote_url)
-    self.url = remote_url #save the original url for later, too
-    @photo_remote_url = remote_url
+    if remote_url
+      self.photo = URI.parse(remote_url)
+      self.url = remote_url #save the original url for later, too
+    end
+      @photo_remote_url = remote_url
   end
 end
