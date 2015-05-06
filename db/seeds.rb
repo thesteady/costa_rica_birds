@@ -4,7 +4,7 @@ locations = YAML.load_file(Rails.root.join('db', 'seeds', 'locations.yml')).map 
   Location.create name: loc['name'], ebird_id: loc['ebird_id'], website: loc['website']
 end
 
-csv_text = File.read(Rails.root.join('db', 'seeds', 'starter_subset.csv'))
+csv_text = File.read(Rails.root.join('db', 'seeds', 'all_species.csv'))
 csv = CSV.parse(csv_text, headers: true)
 
 csv.each do |row|
