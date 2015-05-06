@@ -1,7 +1,9 @@
 class BirdsController < ApplicationController
+ helper_method :sort_column, :sort_direction
 
   def index
-    @birds = Bird.all
+    sort = sort_column + ' ' + sort_direction
+    @birds = Bird.order(sort )
   end
 
   def new
@@ -38,5 +40,13 @@ class BirdsController < ApplicationController
   private
   def bird_params
     params.require(:bird).permit(:photo_remote_url, :attribution, :name, :description, :priority, :number_of_locations)
+  end
+
+  def sort_column
+   %w(name number_of_locations priority).include?(params[:sort]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+     %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"
   end
 end

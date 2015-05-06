@@ -1,4 +1,7 @@
 <div id='bird-show'>
+
+  <%= link_to 'Back to All Birds', birds_path, class: 'go-back' %>
+
   <h1><%= @bird.name %></h1>
 
   <% if @bird.priority %>
@@ -6,6 +9,10 @@
   <% end %>
 
   <p>Seen at <span class='count'><%= @bird.number_of_locations %></span> locations in April-June </p>
+
+  <% if @bird.flickr_url %>
+  <%= link_to 'View the photo on Flickr', @bird.flickr_url %>
+  <% end %>
 
   <% if @bird.photo_file_name %>
     <div class='photo-floating'>
