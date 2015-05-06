@@ -6,9 +6,12 @@
   <% end %>
 
   <p>Seen at <span class='count'><%= @bird.number_of_locations %></span> locations in April-June </p>
+
   <% if @bird.photo_file_name %>
-    <%= image_tag @bird.photo.url(:medium) %>
-    <p class="photo-credit"><span>Photo Credit: </span><%= @bird.attribution %></p>
+    <div class='photo-floating'>
+      <%= image_tag @bird.photo.url(:medium) %>
+      <p class="photo-credit"><span>Photo Credit: </span><%= @bird.attribution %></p>
+    </div>
   <% end %>
 
   <% if @bird.description %>
