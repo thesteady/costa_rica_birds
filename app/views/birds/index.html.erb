@@ -1,9 +1,3 @@
-<div id='homepage-hero'>
-  <p id='sub-sub-title'>Birds were chosen and organized by the number of locations they were observed at in April-June, based on eBird reports. 7 sites that we'll be visiting were used. To see a list of those locations, please visit the <%= link_to "Locations Page", locations_path %>.</p>
-
-  <p><span style='font-style:italic'>What is a Priority Species?</span> These are species that were seen at most of the sites we'll be visiting, or are unique (or just plain cool!) birds.</p>
-</div>
-
 <div>
   <table>
     <thead>
@@ -19,7 +13,12 @@
       <tr>
         <td><%= count %></td>
         <td><%= link_to bird.name, bird_path(bird) %></td>
-        <td><%= image_tag(bird.photo.url(:thumbnail)) if bird.photo_file_name %></td>
+        <td>
+          <% if bird.photo_file_name %>
+            <%= image_tag(bird.photo.url(:thumbnail)) %>
+            <p class="photo-credit"><span>Photo Credit: </span><%= bird.attribution %></p>
+          <% end %>
+        </td>
         <td><%= bird.number_of_locations %></td>
         <td><%= t_f?(bird.priority) %></td>
       </tr>

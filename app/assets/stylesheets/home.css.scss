@@ -30,16 +30,18 @@ body {
 
 
 #bird-show {
-
   h1 {
     font-size: 1.5em;
     color: #888;
   }
+}
 
-  .photo-credit {
-    font-size: 0.5em;
-    span {
-      font-style: italic;
-    }
+.photo-credit {
+  font-size: 0.5em;
+  span {
+    font-style: italic;
   }
+}
+.note {
+  font-style: italic;
 }
