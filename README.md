@@ -3,6 +3,8 @@ Birds of Costa Rica
 
 Learn birds of Costa Rica.
 
+This is an app designed for self-study purposes so that I can learn the birds of Costa Rica. This app is not intended for commercial use or distribution.
+
 ## Development
 
 ### Setup:
@@ -14,8 +16,6 @@ Learn birds of Costa Rica.
 ### Running
 
 `rails s`
-`sass --watch stylesheets/sass:stylesheets`
-
 
 ### Deploying To Heroku
 
@@ -28,13 +28,14 @@ Learn birds of Costa Rica.
 `USERNAME`
 `PASSWORD`
 
-
-
 To Do:
 ------
-- clear out the tmp photos
-- add the photos
 - switch out webrick for puma
+- pick color scheme, get it in css.
+- whiteboard what i want pages to look like
+- update it
+- add some more text to the locations?
+- xeno canto
 
 
 Product Owner Melissa says:
@@ -55,10 +56,7 @@ Laura says:
 - video embed
 
 
-Pick color scheme, get it in css.
-whiteboard what i want pages to look like
-update it
-add some more text to the locations?
-figure out photos
-xeno canto
-video
+Notes for next time:
+--------------------
+go ahead and save larger images, since that's what I want to see anyway. (500px?)
+
